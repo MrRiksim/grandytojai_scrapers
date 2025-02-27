@@ -1,29 +1,30 @@
-﻿Model,Name,Price
-RHD-225,"AXAGON Metal frame for mounting two 2.5"" disks in a 3.5"" position | RHD-225",3.39€
-RHD-125B,"AXAGON Metal frame for mounting one 2.5"" disk into one 3.5"" position | RHD-125B",3.39€
-CLR-M2L3,"AXAGON Passive aluminum heatsink for all M.2 SSDs, size 2280, high 3 mm | CLR-M2L3",3.69€
-RHD-125S,"AXAGON Metal frame for mounting one 2.5"" disk into one 3.5"" position | RHD-125S",3.79€
-CLR-M2L10,"AXAGON Passive aluminum heatsink for all M.2 SSDs, size 2280, high 10 mm | CLR-M2L10",4.39€
-RHD-435,"AXAGON Metal frame for mounting four 2.5"" disks or two 2.5"" disks and one 3.5"" disk in a 5.25"" position | RHD-435",5.19€
-RHD-P25,AXAGON RHD-P25 metal frame 2x 2.5 to 3.5/PCI,7.59€
-CLR-M2,"AXAGON | Passive aluminum cooler for all M.2 SSDs, size 2280, high 12 mm | CLR-M2",12.29€
-CLR-M2XL,"AXAGON Passive aluminum heatsink for single-sided and double-sided M.2 SSD disks, size 2280, height 36 mm | CLR-M2XL",12.39€
-CLR-M2FAN,"AXAGON CLR-M2FAN active fan - M.2 SSD, 80mm SSD, copper body, silicone thermal pads, height 13mm",17.59€
-FD-A-BRKT-003,FRACTAL DESIGN Universal Multibracket Type A Black Dual pack,13.69€
-MF-543,GEMBIRD MF-543 Mounting frame for 3.5 HDD in 5.25 bay,0.89€
-MF-321,GEMBIRD MF-321 metal mounting frame for 2.5inch HDD/SSD to 3.5 bay,0.89€
-MF-3241,GEMBIRD MF-3241 metal mounting frame for 4 x 2.5 HDD/SSD to 3.5 bay,1.39€
-IB-AC653,ICY BOX IB-AC653 Internal Mounting frame 3.5 for 2.5 HDD/SSD Black,9.49€
-IB-AC643,ICY BOX IB-AC643 Internal Mounting frame 3.5 for 2x 2.5 Black,9.89€
-IB-5251,"Icy Box IB-5251 Mounting frame for 2x2,5"" + 1x3,5"" HDD/SSDs in 1x5,25"" bay, with front panel, black",18.29€
-IB-2227STS,ICY BOX IB-2227StS Mobile Rack for 2x2.5 SATA HDD or SSD Black,53.59€
-AD0010,LOGILINK AD0010 - Harddisk Mounting Set 2.5 -> 3.5,2.19€
-UA0133B,LOGILINK UA0133B LOGILINK - Box protective to HDD3.5 black,8.89€
-UA0133G,LOGILINK UA0133G - Box protective to HDD3.5 green,8.89€
-UA0133O,LOGILINK UA0133O - Box protective to HDD3.5 orange,8.89€
-AD0009,LOGILINK AD0009 HDD Mounting Bracket 2.5inch -> 3.5inch,9.39€
-AD0013,"Pajungimo adapteris su varžtais skirtas įdėti 2.5"" HDD/SSD į 3.5"" HDD vietą",9.69€
-AD0011,LOGILINK AD0011 - Harddisk Mounting Bracket 2.5 -> 3.5,10.69€
-UA0194,LOGILINK UA0194 - 3.5 HDD protection cabinet for 5 HDDs,36.49€
-UA0193,LOGILINK UA0193 3.5inch HDD protection cabinet for 10 HDDs,40.99€
-UA0219,LOGILINK UA0219 - Protection cabinet for up to 14x 3.5 /2.5 HDDs,43.39€
+﻿Model;Name;Price
+MF-543;GEMBIRD MF-543 Mounting frame for 3.5 HDD in 5.25 bay;0.89€
+MF-321;GEMBIRD MF-321 metal mounting frame for 2.5inch HDD/SSD to 3.5 bay;0.89€
+MF-3241;GEMBIRD MF-3241 metal mounting frame for 4 x 2.5 HDD/SSD to 3.5 bay;1.39€
+AD0010;LOGILINK AD0010 - Harddisk Mounting Set 2.5 -> 3.5;2.19€
+RHD-225;"AXAGON Metal frame for mounting two 2.5"" disks in a 3.5"" position | RHD-225";3.39€
+RHD-125B;"AXAGON Metal frame for mounting one 2.5"" disk into one 3.5"" position | RHD-125B";3.39€
+CLR-M2L3;AXAGON Passive aluminum heatsink for all M.2 SSDs, size 2280, high 3 mm | CLR-M2L3;3.69€
+RHD-125S;"AXAGON Metal frame for mounting one 2.5"" disk into one 3.5"" position | RHD-125S";3.79€
+CLR-M2L10;AXAGON Passive aluminum heatsink for all M.2 SSDs, size 2280, high 10 mm | CLR-M2L10;4.39€
+RHD-435;"AXAGON Metal frame for mounting four 2.5"" disks or two 2.5"" disks and one 3.5"" disk in a 5.25"" position | RHD-435";5.19€
+RHD-P25;AXAGON RHD-P25 metal frame 2x 2.5 to 3.5/PCI;7.59€
+UA0133B;LOGILINK UA0133B LOGILINK - Box protective to HDD3.5 black;8.89€
+UA0133G;LOGILINK UA0133G - Box protective to HDD3.5 green;8.89€
+UA0133O;LOGILINK UA0133O - Box protective to HDD3.5 orange;8.89€
+AD0009;LOGILINK AD0009 HDD Mounting Bracket 2.5inch -> 3.5inch;9.39€
+IB-AC653;ICY BOX IB-AC653 Internal Mounting frame 3.5 for 2.5 HDD/SSD Black;9.49€
+AD0013;"Pajungimo adapteris su varžtais skirtas įdėti 2.5"" HDD/SSD į 3.5"" HDD vietą";9.69€
+IB-AC643;ICY BOX IB-AC643 Internal Mounting frame 3.5 for 2x 2.5 Black;9.89€
+CLR-M2;AXAGON | Passive aluminum cooler for all M.2 SSDs, size 2280, high 12 mm | CLR-M2;9.99€
+AD0011;LOGILINK AD0011 - Harddisk Mounting Bracket 2.5 -> 3.5;10.69€
+CLR-M2XL;AXAGON Passive aluminum heatsink for single-sided and double-sided M.2 SSD disks, size 2280, height 36 mm | CLR-M2XL;12.39€
+RSS-CD09;"AXAGON RSS-CD09 2.5"" SSD/HDD caddy into DVD slot, 9.5 mm, LED, ALU";12.49€
+FD-A-BRKT-003;FRACTAL DESIGN Universal Multibracket Type A Black Dual pack;13.69€
+CLR-M2FAN;AXAGON CLR-M2FAN active fan - M.2 SSD, 80mm SSD, copper body, silicone thermal pads, height 13mm;17.59€
+IB-5251;"Icy Box IB-5251 Mounting frame for 2x2,5"" + 1x3,5"" HDD/SSDs in 1x5,25"" bay, with front panel, black";18.29€
+UA0194;LOGILINK UA0194 - 3.5 HDD protection cabinet for 5 HDDs;36.59€
+UA0193;LOGILINK UA0193 3.5inch HDD protection cabinet for 10 HDDs;41.19€
+UA0219;LOGILINK UA0219 - Protection cabinet for up to 14x 3.5 /2.5 HDDs;43.49€
+IB-2227STS;ICY BOX IB-2227StS Mobile Rack for 2x2.5 SATA HDD or SSD Black;49.69€

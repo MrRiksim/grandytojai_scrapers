@@ -1,61 +1,62 @@
-﻿Model,Name,Price
-90MC08A0-M0EAY0,ASUS HYPER M.2 X16 GEN 4 CARD,66.59€
-RHD-225,"AXAGON Metal frame for mounting two 2.5"" disks in a 3.5"" position | RHD-225",3.39€
-RHD-125B,"AXAGON Metal frame for mounting one 2.5"" disk into one 3.5"" position | RHD-125B",3.39€
-CLR-M2L3,"AXAGON Passive aluminum heatsink for all M.2 SSDs, size 2280, high 3 mm | CLR-M2L3",3.69€
-RHD-125S,"AXAGON Metal frame for mounting one 2.5"" disk into one 3.5"" position | RHD-125S",3.79€
-CLR-M2L10,"AXAGON Passive aluminum heatsink for all M.2 SSDs, size 2280, high 10 mm | CLR-M2L10",4.39€
-RHD-435,"AXAGON Metal frame for mounting four 2.5"" disks or two 2.5"" disks and one 3.5"" disk in a 5.25"" position | RHD-435",5.19€
-PCEM2-N,AXAGON The PCI-Express x4 internal adapter for connecting an NVMe M.2 SSD disk to a computer | PCEM2-N,7.59€
-RHD-P25,AXAGON RHD-P25 metal frame 2x 2.5 to 3.5/PCI,7.59€
-PCEM2-1U,"AXAGON PCEM2-1U PCI-E 3.0 16x - M.2 SSD NVMe, up to 80mm SSD, low profile 1U",8.49€
-RSS-M2SD,"AXAGON Internal 2.5"" box with SATA interface for M.2 SATA SSD",9.19€
-PCEM2-D,AXAGON PCI-Express x4 adapter to connect up to two M.2 disks to a computer | PCEM2-D,9.49€
-EEM2-SA,AXAGON EEM2-SA USB micro-B 3.2 Gen 1 - M.2 SATA SSD 30-80mm screwless RIBBED box,11.89€
-PCEM2-S,AXAGON PCI-Express x16 internal adapter to connect an NVMe M.2 SSD to a desktop.,11.99€
-CLR-M2,"AXAGON | Passive aluminum cooler for all M.2 SSDs, size 2280, high 12 mm | CLR-M2",12.29€
-CLR-M2XL,"AXAGON Passive aluminum heatsink for single-sided and double-sided M.2 SSD disks, size 2280, height 36 mm | CLR-M2XL",12.39€
-PCEM2-XS,AXAGON PCI-Express x16 adapter with cooler for connecting an NVMe M.2 SSD drive to a computer | PCEM2-XS,15.59€
-CLR-M2FAN,"AXAGON CLR-M2FAN active fan - M.2 SSD, 80mm SSD, copper body, silicone thermal pads, height 13mm",17.59€
-ADSA-FP3,AXAGON | USB 3.0 - SATA 6G | ADSA-FP3,17.79€
-PCEM2-DC,"AXAGON PCEM2-DC PCI-E 3.0 4x - DUAL M.2 SSD (NVMe + SATA), dual voltage, up to 110mm SSD, fan + heatsink",18.19€
-RSS-CD09,"AXAGON RSS-CD09 2.5"" SSD/HDD caddy into DVD slot, 9.5 mm, LED, ALU",18.89€
-9W8C4,Dell PowerEdge 3.5’’ to 2.5’’ HDD converter | Dell,13.19€
-9990000390007,"HDD adapteris, 9.5 mm",12.69€
-9990000380046,HDD kabelis Sata to USB 3.0,15.49€
-FD-A-BRKT-003,FRACTAL DESIGN Universal Multibracket Type A Black Dual pack,13.69€
-MF-321,GEMBIRD MF-321 metal mounting frame for 2.5inch HDD/SSD to 3.5 bay,0.89€
-SATA-IDE-2,GEMBIRD SATA-IDE-2 Bi-directional SATA/IDE converter,5.49€
-EE18-M2S3PCB-01,Gembird adapter card M.2 (only sata data interface) to mini sata (1.8''),5.79€
-PEX-M2-01,GEMBIRD PEX-M2-01 M.2 SSD adapter PCI-Express add-on card with extra low-profile bracket,6.19€
-AUS3-03,"I/O ADAPTER USB-C TO SATA2.5""/AUS3-03 GEMBIRD",7.19€
-AUS3-02,GEMBIRD AUS3-02 USB 3.0 to SATA 2.5 drive adapter GoFlex compatible,8.39€
-AUSI01,GEMBIRD AUSI01 USB to IDE 2.5/3.5inch and SATA adapter,11.19€
-IB-PCI208,"Icy Box IB-PCI208 PCIe-Card, M.2 PCIe SSD to PCIe 3.0 x4 Host | Raidsonic",8.39€
-IB-2538STS,ICY BOX IB-2538StS 2.5inch to 3.5inch HDD/SSD Converter,9.39€
-IB-AC653,ICY BOX IB-AC653 Internal Mounting frame 3.5 for 2.5 HDD/SSD Black,9.49€
-IB-AC643,ICY BOX IB-AC643 Internal Mounting frame 3.5 for 2x 2.5 Black,9.89€
-IB-PCI214M2-HSL,ICY BOX IB-PCI214M2-HSL PCIe extension card with M.2 M-Key socket for one M.2 NVMe SSD,18.49€
-AD0010,LOGILINK AD0010 - Harddisk Mounting Set 2.5 -> 3.5,2.19€
-UA0133B,LOGILINK UA0133B LOGILINK - Box protective to HDD3.5 black,8.89€
-UA0133G,LOGILINK UA0133G - Box protective to HDD3.5 green,8.89€
-UA0133O,LOGILINK UA0133O - Box protective to HDD3.5 orange,8.89€
-AD0009,LOGILINK AD0009 HDD Mounting Bracket 2.5inch -> 3.5inch,9.39€
-AD0013,"Pajungimo adapteris su varžtais skirtas įdėti 2.5"" HDD/SSD į 3.5"" HDD vietą",9.69€
-AD0011,LOGILINK AD0011 - Harddisk Mounting Bracket 2.5 -> 3.5,10.69€
-AU0028A,LOGILINK AU0028A - USB 3.0 to IDE & SATA Adapter with OTB,32.59€
-UA0194,LOGILINK UA0194 - 3.5 HDD protection cabinet for 5 HDDs,36.49€
-UA0193,LOGILINK UA0193 3.5inch HDD protection cabinet for 10 HDDs,40.99€
-UA0219,LOGILINK UA0219 - Protection cabinet for up to 14x 3.5 /2.5 HDDs,43.39€
-52268-1865130,"SATA adapter SSD HDD 2.5 drive, USB 3.0, 2TB",6.59€
-52269,"SATA adapter SSD HDD 2.5 drive, USB C, 2TB",7.19€
-51869,QOLTEC 51869 Pocket on the second disk 2.5 HDD 12.7 mm,11.99€
-51866,QOLTEC 51866 External USB 2.0 12.7mm SATA Optical Drive Case,13.39€
-51864,QOLTEC 51864 Qoltec External USB 2.0 9.5mm SATA Optical Drive Case,14.59€
-51863,External USB2.0 12.7mm SATA Optical Driver Cas,14.89€
-AK-69,"SAVIO AK-69 adapteris USB-C 3.1 Gen 1 (M) - SATA (F), skirtas 2,5 colio diskams",9.49€
-AK-41,"Savio AK-41 išplėtimo kortelė, M.2 NVMe M-Key PCI-E adapteris",10.79€
-SAVAK-68,"SATA-USB Adapter AK-68 SAVIO, USB 3.1",11.49€
-SAVAK-69,Sata-USB-C Adapter 3.1 SAVIO AK-69,12.19€
-SAVIO AK-38,Adapter AK-38 SATA-USB,13.89€
-AK-38,SAVIO AK-38 USB 3.0/SATA III Juoda,14.99€
+﻿Model;Name;Price
+MF-321;GEMBIRD MF-321 metal mounting frame for 2.5inch HDD/SSD to 3.5 bay;0.89€
+AD0010;LOGILINK AD0010 - Harddisk Mounting Set 2.5 -> 3.5;2.19€
+RHD-225;"AXAGON Metal frame for mounting two 2.5"" disks in a 3.5"" position | RHD-225";3.39€
+RHD-125B;"AXAGON Metal frame for mounting one 2.5"" disk into one 3.5"" position | RHD-125B";3.39€
+CLR-M2L3;AXAGON Passive aluminum heatsink for all M.2 SSDs, size 2280, high 3 mm | CLR-M2L3;3.69€
+RHD-125S;"AXAGON Metal frame for mounting one 2.5"" disk into one 3.5"" position | RHD-125S";3.79€
+CLR-M2L10;AXAGON Passive aluminum heatsink for all M.2 SSDs, size 2280, high 10 mm | CLR-M2L10;4.39€
+RHD-435;"AXAGON Metal frame for mounting four 2.5"" disks or two 2.5"" disks and one 3.5"" disk in a 5.25"" position | RHD-435";5.19€
+SATA-IDE-2;GEMBIRD SATA-IDE-2 Bi-directional SATA/IDE converter;5.49€
+EE18-M2S3PCB-01;Gembird adapter card M.2 (only sata data interface) to mini sata (1.8'');5.79€
+PEX-M2-01;GEMBIRD PEX-M2-01 M.2 SSD adapter PCI-Express add-on card with extra low-profile bracket;6.19€
+52268-1865130;SATA adapter SSD HDD 2.5 drive, USB 3.0, 2TB;6.59€
+AUS3-03;"I/O ADAPTER USB-C TO SATA2.5""/AUS3-03 GEMBIRD";7.19€
+52269;SATA adapter SSD HDD 2.5 drive, USB C, 2TB;7.19€
+PCEM2-N;AXAGON The PCI-Express x4 internal adapter for connecting an NVMe M.2 SSD disk to a computer | PCEM2-N;7.59€
+RHD-P25;AXAGON RHD-P25 metal frame 2x 2.5 to 3.5/PCI;7.59€
+AUS3-02;GEMBIRD AUS3-02 USB 3.0 to SATA 2.5 drive adapter GoFlex compatible;8.39€
+IB-PCI208;Icy Box IB-PCI208 PCIe-Card, M.2 PCIe SSD to PCIe 3.0 x4 Host | Raidsonic;8.39€
+PCEM2-1U;AXAGON PCEM2-1U PCI-E 3.0 16x - M.2 SSD NVMe, up to 80mm SSD, low profile 1U;8.49€
+UA0133B;LOGILINK UA0133B LOGILINK - Box protective to HDD3.5 black;8.89€
+UA0133G;LOGILINK UA0133G - Box protective to HDD3.5 green;8.89€
+UA0133O;LOGILINK UA0133O - Box protective to HDD3.5 orange;8.89€
+RSS-M2SD;"AXAGON Internal 2.5"" box with SATA interface for M.2 SATA SSD";9.19€
+AD0009;LOGILINK AD0009 HDD Mounting Bracket 2.5inch -> 3.5inch;9.39€
+IB-2538STS;ICY BOX IB-2538StS 2.5inch to 3.5inch HDD/SSD Converter;9.39€
+IB-AC653;ICY BOX IB-AC653 Internal Mounting frame 3.5 for 2.5 HDD/SSD Black;9.49€
+PCEM2-D;AXAGON PCI-Express x4 adapter to connect up to two M.2 disks to a computer | PCEM2-D;9.49€
+AK-69;SAVIO AK-69 adapteris USB-C 3.1 Gen 1 (M) - SATA (F), skirtas 2,5 colio diskams;9.49€
+AD0013;"Pajungimo adapteris su varžtais skirtas įdėti 2.5"" HDD/SSD į 3.5"" HDD vietą";9.69€
+IB-AC643;ICY BOX IB-AC643 Internal Mounting frame 3.5 for 2x 2.5 Black;9.89€
+CLR-M2;AXAGON | Passive aluminum cooler for all M.2 SSDs, size 2280, high 12 mm | CLR-M2;9.99€
+AD0011;LOGILINK AD0011 - Harddisk Mounting Bracket 2.5 -> 3.5;10.69€
+AK-41;Savio AK-41 išplėtimo kortelė, M.2 NVMe M-Key PCI-E adapteris;10.79€
+AUSI01;GEMBIRD AUSI01 USB to IDE 2.5/3.5inch and SATA adapter;11.19€
+SAVAK-68;SATA-USB Adapter AK-68 SAVIO, USB 3.1;11.49€
+EEM2-SA;AXAGON EEM2-SA USB micro-B 3.2 Gen 1 - M.2 SATA SSD 30-80mm screwless RIBBED box;11.89€
+PCEM2-S;AXAGON PCI-Express x16 internal adapter to connect an NVMe M.2 SSD to a desktop.;11.99€
+51869;QOLTEC 51869 Pocket on the second disk 2.5 HDD 12.7 mm;11.99€
+SAVAK-69;Sata-USB-C Adapter 3.1 SAVIO AK-69;12.19€
+CLR-M2XL;AXAGON Passive aluminum heatsink for single-sided and double-sided M.2 SSD disks, size 2280, height 36 mm | CLR-M2XL;12.39€
+RSS-CD09;"AXAGON RSS-CD09 2.5"" SSD/HDD caddy into DVD slot, 9.5 mm, LED, ALU";12.49€
+9990000390007;HDD adapteris, 9.5 mm;12.69€
+9W8C4;Dell PowerEdge 3.5’’ to 2.5’’ HDD converter | Dell;13.19€
+51866;QOLTEC 51866 External USB 2.0 12.7mm SATA Optical Drive Case;13.39€
+FD-A-BRKT-003;FRACTAL DESIGN Universal Multibracket Type A Black Dual pack;13.69€
+SAVIO AK-38;Adapter AK-38 SATA-USB;13.99€
+51864;QOLTEC 51864 Qoltec External USB 2.0 9.5mm SATA Optical Drive Case;14.59€
+51863;External USB2.0 12.7mm SATA Optical Driver Cas;14.99€
+AK-38;SAVIO AK-38 USB 3.0/SATA III Juoda;14.99€
+9990000380046;HDD kabelis Sata to USB 3.0;15.49€
+PCEM2-XS;AXAGON PCI-Express x16 adapter with cooler for connecting an NVMe M.2 SSD drive to a computer | PCEM2-XS;15.59€
+CLR-M2FAN;AXAGON CLR-M2FAN active fan - M.2 SSD, 80mm SSD, copper body, silicone thermal pads, height 13mm;17.59€
+ADSA-FP3;AXAGON | USB 3.0 - SATA 6G | ADSA-FP3;17.79€
+PCEM2-DC;AXAGON PCEM2-DC PCI-E 3.0 4x - DUAL M.2 SSD (NVMe + SATA), dual voltage, up to 110mm SSD, fan + heatsink;18.19€
+IB-PCI214M2-HSL;ICY BOX IB-PCI214M2-HSL PCIe extension card with M.2 M-Key socket for one M.2 NVMe SSD;18.49€
+AU0028A;LOGILINK AU0028A - USB 3.0 to IDE & SATA Adapter with OTB;32.69€
+UA0194;LOGILINK UA0194 - 3.5 HDD protection cabinet for 5 HDDs;36.59€
+UA0193;LOGILINK UA0193 3.5inch HDD protection cabinet for 10 HDDs;41.19€
+UA0219;LOGILINK UA0219 - Protection cabinet for up to 14x 3.5 /2.5 HDDs;43.49€
+90MC08A0-M0EAY0;ASUS HYPER M.2 X16 GEN 4 CARD;66.59€
+IB-2242SSK;ICY BOX Backplane 4x2.5 SAS/SATA HDD in 1x5.25 bay MiniSAS Host 12 Gbit/s Black;107.19€
