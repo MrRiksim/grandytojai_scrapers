@@ -2,7 +2,7 @@
 
 ## Overview
 
-This Python script scrapes product data from the Skytech.lt website, specifically from the computer components category. It extracts product models, names, and prices, then saves the data into CSV files.
+This Python script scrapes products from e-commerce websites, specifically from the computer components category. It extracts product models, names, and prices, then saves the data into CSV files.
 
 ## Dependencies
 
@@ -22,10 +22,22 @@ pip install -r requirements.txt
 
 ## Usage
 
-Run the script using:
-
+Run all the scripts using:
+###Windows
 ```bash
-python 'the scrapers'/skytech.py 
+python 'the scrapers'/*.py
+```
+
+###Linux
+```bash
+#Initialise virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+python 'the scrapers'/*.py
+
+#Deactivate virtual environment
+deactivate
 ```
 
 ## How It Works
