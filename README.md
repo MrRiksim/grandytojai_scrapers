@@ -8,12 +8,6 @@ This Python script scrapes products from e-commerce websites, specifically from 
 
 The script requires the following Python libraries:
 
-- `requests` – For sending HTTP requests to the website.
-- `re` – For handling regular expressions.
-- `os` – For file system operations.
-- `pandas` – For organizing and saving data.
-- `bs4 (BeautifulSoup)` – For parsing HTML content.
-
 To install the required dependencies, run:
 
 ```bash
@@ -23,12 +17,15 @@ pip install -r requirements.txt
 ## Usage
 
 Run all the scripts using:
-###Windows
+
+### Windows
+
 ```bash
 python 'the scrapers'/*.py
 ```
 
-###Linux
+### Linux
+
 ```bash
 #Initialise virtual environment
 python3 -m venv venv
