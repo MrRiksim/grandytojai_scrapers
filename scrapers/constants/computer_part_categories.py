@@ -1,0 +1,8 @@
+SSD_CATEGORIES = ["HDD, SSD ir priedai"]
+COOLER_CATEGORIES = ["Aušintuvai"]
+CASE_CATEGORIES = ["Korpusai ir priedai"]
+PSU_CATEGORIES = ["Maitinimo blokai"]
+RAM_CATEGORIES = ["Operatyvinė atmintis (RAM)"]
+MOTHERBOARD_CATEGORIES = ["Pagrindinės plokštės ir priedai"]
+CPU_CATEGORIES = ["Procesoriai (CPU)"]
+GPU_CATEGORIES = ["Vaizdo plokštės ir priedai"]
