@@ -3,10 +3,16 @@ import re
 import os
 from pandas import DataFrame
 from bs4 import BeautifulSoup
+from scrapers.api.api import ApiClient
+from scrapers.dataclass.computer_part import ComputerPart 
+from scrapers.enums.computer_part_type import ComputerPartType 
 
 session = requests.Session()
 url = 'https://www.skytech.lt/kompiuteriai-komponentai-kompiuteriu-komponentai-v-85.html?sand=2'
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+
+api_client = ApiClient()
+computer_part_endpoint = "computerParts"
 
 def nextPage(url, models, names, prices):
     session2 = requests.Session()
@@ -73,11 +79,34 @@ for link in links:
         category = str(soup.find('div', class_="navbar-breadcrumb").find_all('a')[-1].text).replace('/', '-')
         if category == 'Kompiuterių komponentai':
             category = subcategory
-        df = DataFrame({'Model': str(a.text).strip(), 'Name': str(b.text).strip(), 'Price': str(c.text).strip()} for a, b, c in zip(models, names, prices))
-        df.to_csv(fr"{os.path.dirname(os.path.realpath(__file__))}\..\the data\skytech\{category}\{subcategory}.csv", index=False, encoding='utf-8-sig', sep=';')
+
+        created_count = 0
+        updated_count = 0
+
+        for model, name, price in zip(models, names, prices):
+            computer_part = ComputerPart(
+                barcode=str(model.text).strip(),
+                part_name=str(name.text).strip(),
+                part_type=ComputerPartType.from_str(category).value[0],
+                price=float(str(price.text).strip().replace(' ', '').removesuffix("€"))
+            )
+            
+            try:
+                response = api_client.post_data(computer_part_endpoint, computer_part.__dict__)
+                if response.status_code == 201:
+                    created_count += 1
+            except requests.HTTPError as e:
+                if e.response.status_code == 409:
+                    response = api_client.put_data(computer_part_endpoint, computer_part.__dict__)
+                    if response.status_code == 200:
+                        updated_count += 1
+                else:
+                    print(e)
+            finally:
+                continue
+            
         print(category + ' -> ' + subcategory)
-        #print(len(models))
-        #print(len(names))
-        #print(len(prices))
+        print(f"Newly scrapped parts: {created_count}")
+        print(f"Updated scrapped parts: {updated_count}")
     else:
         print('Request failed: ' + link)
