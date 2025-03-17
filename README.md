@@ -21,7 +21,8 @@ Run all the scripts using:
 ### Windows
 
 ```bash
-python 'the scrapers'/*.py
+python -m scrapers.skytech
+...
 ```
 
 ### Linux
@@ -31,7 +32,8 @@ python 'the scrapers'/*.py
 python3 -m venv venv
 source venv/bin/activate
 
-python 'the scrapers'/*.py
+python -m scrapers.skytech
+...
 
 #Deactivate virtual environment
 deactivate
