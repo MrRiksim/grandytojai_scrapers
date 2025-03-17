@@ -31,7 +31,8 @@ python 'the scrapers'/*.py
 python3 -m venv venv
 source venv/bin/activate
 
-python 'the scrapers'/*.py
+python -m scrapers.skytech.py
+...
 
 #Deactivate virtual environment
 deactivate
