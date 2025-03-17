@@ -27,6 +27,8 @@ class ComputerPartType(Enum):
             return ComputerPartType.COOLER
         elif category in PSU_CATEGORIES:
             return ComputerPartType.PSU
+        elif category in RAM_CATEGORIES:
+            return ComputerPartType.RAM
         elif category in MOTHERBOARD_CATEGORIES:
             return ComputerPartType.MOTHERBOARD
         elif category in MOTHERBOARD_CATEGORIES:
