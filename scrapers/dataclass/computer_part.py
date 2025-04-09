@@ -9,6 +9,7 @@ class ComputerPart:
     imageUrl: str
     storeUrl: str
     storeName: str
+    hasDiscount: bool
 
     def __init__(
         self, 
@@ -18,7 +19,8 @@ class ComputerPart:
         price: float, 
         image_url: str, 
         store_url: str, 
-        store_name: str
+        store_name: str,
+        has_discount: bool
     ):
         self.barcode = barcode
         self.partName = part_name
@@ -27,3 +29,4 @@ class ComputerPart:
         self.imageUrl = image_url
         self.storeUrl = store_url
         self.storeName = store_name
+        self.hasDiscount = has_discount
