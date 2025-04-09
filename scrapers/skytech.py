@@ -12,7 +12,7 @@ headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleW
 api_client = ApiClient()
 computer_part_endpoint = "computerParts"
 
-def nextPage(url, models, names, prices, imageUrls, partUrls):
+def nextPage(url, models, names, prices, imageUrls, partUrls, discounts):
     session2 = requests.Session()
     session2.get(url, headers=headers)
     session2.get(url, headers=headers)
@@ -24,6 +24,7 @@ def nextPage(url, models, names, prices, imageUrls, partUrls):
         morePrices = soup.find_all('strong', string=re.compile("€"))
         moreImageUrls = getImageURLs(str(s2.url).replace('pav=0', 'pav=1'))
         morePartUrls = [f'https://www.skytech.lt/{a.find('a').attrs.get('href')}' for a in soup.find_all('td', class_='name')]
+        moreDiscounts = [True if bool(re.search("ispardavimas", str(a))) else False for a in soup.find_all('td', class_='icons')]
         if len(moreModels) != len(moreNames) or len(moreNames) != len(morePrices) or len(morePrices) != len(moreImageUrls) or len(moreImageUrls) != len(morePartUrls):
             print('Something went wrong with ' + url)
             return
@@ -32,6 +33,7 @@ def nextPage(url, models, names, prices, imageUrls, partUrls):
         prices.extend(morePrices)
         imageUrls.extend(moreImageUrls)
         partUrls.extend(morePartUrls)
+        discounts.extend(moreDiscounts)
     else:
         print('Request failed: ' + s2.url)
 
@@ -85,11 +87,12 @@ for link in links:
         prices = soup.find_all('strong', string=re.compile("€"))
         imageUrls = getImageURLs(str(s.url).replace('pav=0', 'pav=1'))
         partUrls = [f'https://www.skytech.lt/{a.find('a').attrs.get('href')}' for a in soup.find_all('td', class_='name')]
+        discounts = [True if bool(re.search("ispardavimas|[2-9][0-9]%", str(a))) else False for a in soup.find_all('td', class_='icons')]
         if len(models) != len(names) or len(names) != len(prices) or len(prices) != len(imageUrls) or len(imageUrls) != len(partUrls):
             print('Something went wrong with ' + link)
             continue
         if len(models) == 500:
-            nextPage(link + '&page=2', models, names, prices, imageUrls, partUrls)
+            nextPage(link + '&page=2', models, names, prices, imageUrls, partUrls, discounts)
         subcategory = str(soup.find('h1').text).replace('/', '-')
         category = str(soup.find('div', class_="navbar-breadcrumb").find_all('a')[-1].text).replace('/', '-')
         if category == 'Kompiuterių komponentai':
@@ -98,7 +101,7 @@ for link in links:
         created_count = 0
         updated_count = 0
 
-        for model, name, price, imageUrl, partUrl in zip(models, names, prices, imageUrls, partUrls):
+        for model, name, price, imageUrl, partUrl, discount in zip(models, names, prices, imageUrls, partUrls, discounts):
             computer_part = ComputerPart(
                 barcode=str(model.text).strip(),
                 part_name=str(name.text).strip(),
@@ -106,7 +109,8 @@ for link in links:
                 price=float(str(price.text).strip().replace(' ', '').removesuffix("€")),
                 image_url=imageUrl,
                 store_url=partUrl,
-                store_name='Skytech'
+                store_name='Skytech',
+                has_discount=discount
             )
             
             try:

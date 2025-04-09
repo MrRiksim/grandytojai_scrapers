@@ -64,9 +64,11 @@ class KilobaitasScrapper(Scrapper):
         part_name = item_title_el.attrs.get('title').strip()
         part_type = ComputerPartType.from_str(category).value[0]
 
-        price = float(category_item.select_one('div.item-price').find('span', string=re.compile('€')).get_text().strip().replace(',', '.').removesuffix("€"))
+        price = float(category_item.find('span', class_='price').find(string=re.compile('€')).get_text().strip().replace(',', '.').removesuffix("€"))
         part_url = f"{self.base_url}{item_title_el.attrs.get('href')}"
         image_url = f"{self.base_url}{category_item.find('img').attrs.get('src')}"
+        discount = category_item.find('span', class_='sale-item-label percent-discount').get_text()
+        has_discount = int(discount.removesuffix('%')) > 20 if len(str(discount)) > 0 else False
 
         if (new_barcode_value := self.bad_barcode_results_dict.get(part_url.split('itemid=')[1].strip())) and (new_barcode_text := new_barcode_value.get('new_barcode')):
             barcode = new_barcode_text
@@ -82,7 +84,8 @@ class KilobaitasScrapper(Scrapper):
             price=price,
             image_url=image_url,
             store_url=part_url,
-            store_name='Kilobaitas'
+            store_name='Kilobaitas',
+            has_discount=has_discount
         )
     
     async def sendScrappedComputerPart(self, async_session: aiohttp.ClientSession, computer_part: ComputerPart):
