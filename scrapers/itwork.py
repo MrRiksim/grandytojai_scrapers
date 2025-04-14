@@ -32,35 +32,31 @@ class ItworkScrapper(Scrapper):
             if a_tag and span_tag:
                 href = a_tag.attrs.get('href')
                 text = span_tag.get_text(strip=True)
-                print(f"Found category: {text}, URL: {href}")  
                 categories.append((href, text))
         return categories
     
-    # def getComputerPartData(self, category_item: BeautifulSoup, category: str, ) -> ComputerPart:
-    #     item_title_el = category_item.find('a')
-    #     part_name = item_title_el.attrs.get('title').strip()
-    #     part_type = ComputerPartType.from_str(category).value[0]
+    def getComputerPartData(self, category_item: BeautifulSoup, category: str, ) -> ComputerPart:
+        item_title_el = category_item.find('div', class_="product_thumb")
+        part_name = item_title_el.find('div', class_="name").find('a').get_text(strip=True)
+        part_type = ComputerPartType.from_str(category).value[0]
 
-    #     price = float(category_item.select_one('div.item-price').find('span', string=re.compile('€')).get_text().strip().replace(',', '.').removesuffix("€"))
-    #     part_url = f"{self.base_url}{item_title_el.attrs.get('href')}"
-    #     image_url = f"{self.base_url}{category_item.find('img').attrs.get('src')}"
+        price = float(category_item.select_one('div.price').find('span', string=re.compile('€')).get_text().strip().replace(',', '.').removesuffix("€"))
+        part_url = f"{self.base_url}{item_title_el.find('div', class_="name").find('a').attrs.get('href')}"
+        image_url = f"{self.base_url}{category_item.find('img').attrs.get('src')}"
 
-    #     if (new_barcode_value := self.bad_barcode_results_dict.get(part_url.split('itemid=')[1].strip())) and (new_barcode_text := new_barcode_value.get('new_barcode')):
-    #         barcode = new_barcode_text
-    #     else:
-    #         barcode = category_item.select_one('span.item-code').get_text().strip()
-    #         if barcode.endswith('...'):
-    #             barcode = self.getBarcodeOutOfName(barcode, part_name)
+        stat_block = category_item.find("span", class_="stat-2")
+        spans = stat_block.find_all("span")
+        barcode = spans[1].get_text().strip()
         
-    #     return ComputerPart(
-    #         barcode=barcode,
-    #         part_name=part_name,
-    #         part_type=part_type,
-    #         price=price,
-    #         image_url=image_url,
-    #         store_url=part_url,
-    #         store_name='ITwork'
-    #     )
+        return ComputerPart(
+            barcode=barcode,
+            part_name=part_name,
+            part_type=part_type,
+            price=price,
+            image_url=image_url,
+            store_url=part_url,
+            store_name='ITwork'
+        )
 
     async def main(self):
         session_content = self.session.get(self.starting_url, headers=self.headers)
@@ -73,21 +69,22 @@ class ItworkScrapper(Scrapper):
         for link in category_links:
             print(link)
 
+        self.session.close()
+
         print("------------------------")
 
-        session_results = await self.async_api_client._make_requests([f"{category_tuple[0]}" for category_tuple in category_links], self.headers)
+        for category in category_links:
+            s = self.session.get(f"{category[0]}", headers=self.headers)
+            category_items = soup.find_all('div', class_='product-layout')
+            computer_parts_data = [self.getComputerPartData(category_item, category[1]) for category_item in category_items]
 
-        for session_content, category_tuple in zip(session_results, category_links):
-            soup = BeautifulSoup(session_content[0], 'lxml')
+            for computer_part in computer_parts_data:
+                print(computer_part)
 
-            if soup.find('div', class_='refine-categories'):
-                new_category_links = self.getPageCategoriesAndUrls(soup)
-                category_links.extend(new_category_links)
-                session_results.extend(await self.async_api_client._make_requests([f"{self.base_url}{category_tuple_new[0]}" for category_tuple_new in new_category_links], self.headers))
-                continue
-            
-        for link in category_links:
-            print(link)
+
+
+        
+
         
 
 
