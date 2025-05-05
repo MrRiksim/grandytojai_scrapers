@@ -100,6 +100,16 @@ class KilobaitasScrapper(Scrapper):
             if status_code == 201:
                 self.created_count += 1
                 self.total_scrapped_count += 1
+            if status_code == 409:
+                response, status_code, url = await self.async_api_client._make_request(
+                    async_session=async_session,
+                    headers={"Content-Type": "application/json"},
+                    url=f"{BACKEND_BASE_URL_DEV}{self.computer_part_endpoint}", 
+                    method="PUT", 
+                    data=computer_part.__dict__
+                )
+                self.updated_count += 1
+                self.total_scrapped_count += 1
         except aiohttp.ClientResponseError as e:
             if e.status == 409:
                 response, status_code, url = await self.async_api_client._make_request(
@@ -123,6 +133,7 @@ class KilobaitasScrapper(Scrapper):
         category_links = self.getPageCategoriesAndUrls(soup)
 
         session_results = await self.async_api_client._make_requests([f"{self.base_url}{category_tuple[0]}" for category_tuple in category_links], self.headers)
+        self.api_client.put_data("resetStatus?storeName=skytech", {})
 
         for session_content, category_tuple in zip(session_results, category_links):
             soup = BeautifulSoup(session_content[0], 'lxml')
