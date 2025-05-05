@@ -76,6 +76,7 @@ for c in categorylinks:
     else:
         print('Request failed: ' + s.url)
 
+api_client.put_data(computer_part_endpoint + "resetStatus?storeName=skytech", {})
 for link in links:
     session.get(link, headers=headers)
     session.get(link, headers=headers)
@@ -100,7 +101,6 @@ for link in links:
 
         created_count = 0
         updated_count = 0
-
         for model, name, price, imageUrl, partUrl, discount in zip(models, names, prices, imageUrls, partUrls, discounts):
             computer_part = ComputerPart(
                 barcode=str(model.text).strip(),
@@ -117,6 +117,9 @@ for link in links:
                 response = api_client.post_data(computer_part_endpoint, computer_part.__dict__)
                 if response.status_code == 201:
                     created_count += 1
+                if response.status_code == 409:
+                    response = api_client.put_data(computer_part_endpoint, computer_part.__dict__)
+                    updated_count += 1
             except requests.HTTPError as e:
                 if e.response.status_code == 409:
                     response = api_client.put_data(computer_part_endpoint, computer_part.__dict__)
